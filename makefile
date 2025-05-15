@@ -20,7 +20,9 @@ uninstall: bin/$(OUT_FILE)
 	rm -f $$HOME/../usr/bin/$(OUT_FILE)
 
 run:
+	@echo -e '\e[94mTest #1\e[m'
 	./bin/$(OUT_FILE) -i test c
+	@echo -e '\e[94mTest #2\e[m'
 	./bin/$(OUT_FILE) test
 
 clean veryclean:
