@@ -2,6 +2,7 @@
 #include <stdlib.h>
 #include <unistd.h>
 #include <dirent.h>
+#include <string.h>
 
 int read_dir() {
   DIR *d;
