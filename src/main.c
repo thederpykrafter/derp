@@ -24,7 +24,7 @@ int read_dir() {
 int main(int argc, char **argv) {
   char *project, *language;
   if (argc < 2) {
-    printf("missing args");
+    printf("missing args\n");
   } else if (strcmp(argv[1], "-i") == 0) {
     project = argv[2];
     language = argv[3];
