@@ -6,23 +6,6 @@
 #include <sys/types.h>
 #include <unistd.h>
 
-int read_dir() {
-  DIR *d;
-  struct dirent *dir;
-  // set path to "~/Dev"
-  char *path = strcat(getenv("HOME"), "/Dev");
-
-  d = opendir(path);
-  if (d) { // if dir exists
-    // iterate through contents of dir
-    while ((dir = readdir(d)) != NULL) {
-      printf("%s\n", dir->d_name);
-    }
-    closedir(d);
-  }
-  return (0);
-}
-
 int dir_exists(const char *path) {
   struct stat info;
   if (stat(path, &info) != 0) {
